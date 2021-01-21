@@ -2,23 +2,22 @@ exports.config = {
   tests: './*_test.js',
   output: './output',
   helpers: {
-    SetScore: {
-        "require": "./setscore_helper.js"
-    },
     WebDriver: {
       url: 'http://crossbrowsertesting.github.io/todo-app.html',
-      browser: 'chrome',
+      browser: 'Safari',
       host: 'hub.crossbrowsertesting.com',
       port: 80,
       user: 'YOUR_USERNAME',
       key: 'YOUR_AUTHKEY',
       desiredCapabilities:{
         name: "Codeceptjs Test",
-        platform: "Windows 10",
-        browserName: 'Chrome',
-        record_video: 'true' ,
-        record_network: 'false',
-      },
+        'browserName': 'Safari',
+        'deviceName': 'iPhone 11 Pro',
+        'platformVersion': '13.2',
+        'platformName': 'iOS',
+        'deviceOrientation': 'portrait',
+        record_video: true
+      }
 
     }
   },

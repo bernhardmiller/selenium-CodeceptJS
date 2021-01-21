@@ -1,7 +1,7 @@
 
 Feature('Codecepttest');
 
-Scenario('test something', (I) => {
+Scenario('test something', ({ I }) => {
   I.amOnPage('http://crossbrowsertesting.github.io/todo-app.html');
   I.see('Todo App');
   I.checkOption('/html/body/div/div/div/ul/li[4]/input');
